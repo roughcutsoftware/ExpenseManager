@@ -398,5 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Roughcut Software exclusions 
-ExpenseManager/appsettings.json
 /ExpenseManager/appsettings.json
