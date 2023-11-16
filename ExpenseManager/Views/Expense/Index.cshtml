@@ -110,9 +110,10 @@
     var ReportExpense = function () {
         var url = "/Expense/ExpenseSummary";
 
-        $("#expenseReportModalDiv").load(url, function () {
-            $("#expenseReportModal").modal("show");
-        })
+        $("#expenseReportModalDiv").load(url,
+            function() {
+                $("#expenseReportModal").modal("show");
+            });
     }
 
     var DeleteExpense = function (itemId) {
@@ -123,10 +124,10 @@
             $.ajax({
                 type: "POST",
                 url: "/Expense/Delete/" + itemId,
-                success: function () {
+                success: function() {
                     window.location.href = "/Expense/Index";
                 }
-            })
+            });
         }
     }
 </script>
@@ -140,13 +141,13 @@
             type: "POST",
             url: "/Expense/Create",
             data: myformdata,
-            success: function () {
+            success: function() {
                 $("#myModal").modal("hide");
                 window.location.href = "/Expense/Index";
             },
-            error: function (errormessage) {
+            error: function(errormessage) {
                 alert(errormessage.responseText);
             }
-        })
+        });
     })
 </script>

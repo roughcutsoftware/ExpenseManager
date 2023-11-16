@@ -11,6 +11,7 @@ namespace ExpenseManager.Models
     {
         [Key]
         public int ItemId { get; set; }
+
         [Required]
         public string ItemName { get; set; }
 
